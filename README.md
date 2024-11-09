@@ -27,5 +27,10 @@ As a stretch goal, I would like to make the `contact` page contain either a form
 
 ## Project Wireframe
 
+![Landing Page](https://github.com/user-attachments/assets/31953f4d-37a3-4fd5-952b-c8afd4ca006a)
+![image](https://github.com/user-attachments/assets/38cbacf7-9d92-4d1d-a6d8-a86ebea2bdde)
+![image](https://github.com/user-attachments/assets/ce359e76-b5fc-4a0f-b889-9d8387704335)
+![image](https://github.com/user-attachments/assets/15462a7a-9bd9-473b-b07d-265e8998a419)
+![image](https://github.com/user-attachments/assets/e175f613-2ecc-46fb-b77d-b43035845c04)
 
-![wireframe](wireframe-example.png)
+
