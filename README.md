@@ -34,3 +34,5 @@ As a stretch goal, I would like to make the `contact` page contain either a form
 ![image](https://github.com/user-attachments/assets/e175f613-2ecc-46fb-b77d-b43035845c04)
 
 
+## Reference Links / Citations
+- [Nav Bar Guide](https://www.w3schools.com/css/css_navbar_horizontal.asp)

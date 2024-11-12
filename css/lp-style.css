@@ -1,0 +1,50 @@
+/* Background Page Content */
+body{
+  background-color: lightblue;
+}
+
+h1{
+  text-align: center;
+}
+
+/* Nav Bar Menu CSS */
+nav{
+
+}
+
+ul{
+  position: sticky;
+  width: 100%;
+  list-style-type: none;
+  margin: auto;
+  padding: 10 10 10 10;
+  border-width: 2px;
+  border-color: black;
+  background-color: black;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a{
+  padding: 14px 16px;
+  color: white;
+  align-items: center;
+  align-content: center;
+  border-width: 2px;
+  /* border-color: black; */
+  display: inline;
+  /* background-color: white; */
+  border-right: 2px solid #bbb;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
