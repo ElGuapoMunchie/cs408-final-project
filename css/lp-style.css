@@ -1,50 +1,55 @@
 /* Background Page Content */
-body{
-  background-color: lightblue;
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #133959, #91E4FB);
+  background-size: cover;
 }
 
 h1{
+  text-shadow: #393939 3px 3px 1px;
+  color: white;
+  padding: 10px;
+  margin-top: 0;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, #91E4FB, #133959);
   text-align: center;
 }
 
-/* Nav Bar Menu CSS */
-nav{
-
-}
-
-ul{
-  position: sticky;
-  width: 100%;
-  list-style-type: none;
-  margin: auto;
-  padding: 10 10 10 10;
-  border-width: 2px;
-  border-color: black;
+/* Styling the navigation bar */
+.menu {
   background-color: black;
-  overflow: hidden;
-}
-
-li {
-  float: left;
-}
-
-li a{
-  padding: 14px 16px;
-  color: white;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  align-content: center;
-  border-width: 2px;
-  /* border-color: black; */
-  display: inline;
-  /* background-color: white; */
-  border-right: 2px solid #bbb;
+  height: 40px; /* Adjust the height as needed */
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+.menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
-.active {
-  background-color: #04AA6D;
+.menu li {
+  margin: 0 15px; /* Space out the list items */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Adjust the font size as needed */
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+}
+
+/* Hover effect */
+.menu a:hover {
+  background-color: #393939;
 }
 
