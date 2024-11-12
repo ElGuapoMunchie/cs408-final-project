@@ -4,9 +4,13 @@ html, body {
   margin: 0;
 }
 
-body {
-  background-image: linear-gradient(to bottom, #133959, #91E4FB);
-  background-size: cover;
+/* General Text Content */
+p{
+  color:white;
+}
+
+main{
+  margin: 20px;
 }
 
 h1{
@@ -50,6 +54,14 @@ h1{
 
 /* Hover effect */
 .menu a:hover {
-  background-color: #393939;
+  background-color: #343434;
 }
 
+/* Body Text (below nav bar) */
+body {
+  background-color: #133959;
+  background-repeat: no-repeat;
+  /* Adjust height of each gradient */
+  background-size: 100% 200px, 100% calc(100% - 200px); 
+  background-position: top, bottom;
+}
