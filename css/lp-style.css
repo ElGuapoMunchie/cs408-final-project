@@ -18,8 +18,9 @@ h1{
   color: white;
   padding: 10px;
   margin-top: 0;
+  margin-bottom: 0;
   background-size: cover;
-  background-image: linear-gradient(to bottom, #91E4FB, #133959);
+  background-image: linear-gradient(to bottom, #91E4FB, #133959 55px);
   text-align: center;
 }
 
@@ -29,6 +30,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   height: 40px; /* Adjust the height as needed */
 }
 
@@ -36,7 +38,7 @@ h1{
   list-style: none;
   display: flex;
   padding: 0;
-  margin: 0;
+  margin: 10px;
 }
 
 .menu li {
@@ -54,7 +56,11 @@ h1{
 
 /* Hover effect */
 .menu a:hover {
-  background-color: #343434;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgb(29, 73, 63);
+  color:whitesmoke;
+  /* #272727; */
 }
 
 /* Body Text (below nav bar) */

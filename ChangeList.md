@@ -2,9 +2,9 @@
 
 ## Tasks:
 #### Landing Page:
-- Fix gradient styling
+- Fix gradient styling [DONE]
 - Create boxes for header, menu bar, bottom text content
-- Raise height of menu bar to hide gradient transition
+- Raise height of menu bar to hide gradient transition [DONE]
 - Add text, pictures to landing page
 
 #### Forum:
