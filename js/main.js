@@ -1,18 +1,51 @@
+let lastCall = 0;
+
 window.onload = loaded;
 
-/**
- * Simple Function that will be run when the browser is finished loading.
- */
 function loaded() {
-    // Assign to a variable so we can set a breakpoint in the debugger!
-    const hello = sayHello();
-    console.log(hello);
-}
+  const button = document.querySelector('.money-button');
 
-/**
- * This function returns the string 'hello'
- * @return {string} the string hello
- */
-export function sayHello() {
-    return 'hello';
+  button.addEventListener('mouseover', () => {
+    // On mouseover, allow for fluttering dollar bills to be created
+    button.addEventListener('mousemove', throttle(createDollar, 75)); // Call function at most once every 500ms
+  });
+
+  button.addEventListener('mouseleave', () => {
+    // Remove event listener when the mouse leaves the button
+    button.removeEventListener('mousemove', createDollar);
+  });
+
+  function createDollar(event) {
+    for (let i = 0; i < 5; i++) { // Now creates only 5 dollar signs per mouse move
+      const dollar = document.createElement('span');
+      dollar.classList.add('dollar');
+      dollar.innerText = '$';
+
+      // Position the dollar sign at the mouse cursor location relative to the entire page
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+
+      dollar.style.left = `${mouseX}px`;
+      dollar.style.top = `${mouseY}px`;
+
+      // Add dollar to the body or document so it can flow over the page
+      document.body.appendChild(dollar);
+
+      // Remove the dollar after animation ends
+      dollar.addEventListener('animationend', () => {
+        dollar.remove();
+      });
+    }
+  }
+
+  // Throttle function - limits how often the provided function can be called
+  function throttle(func, limit) {
+    return function(...args) {
+      const now = Date.now();
+      if (now - lastCall >= limit) {
+        lastCall = now;
+        func(...args);
+      }
+    };
+  }
 }
