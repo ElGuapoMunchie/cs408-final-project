@@ -71,10 +71,11 @@ h2 {
 /* ======================================================= */
 /* Body Text (below nav bar) */
 body {
-  background-color: rgb(9, 29, 45);
+  background-size: cover;
+  background-image: linear-gradient(to bottom, #133959, rgb(9, 29, 45));
   background-repeat: no-repeat;
   /* Adjust height of each gradient */
-  background-size: 100% 200px, 100% calc(100% - 200px);
+  /* background-size: 100% 200px, 100% calc(100% - 200px); */
   background-position: top, bottom;
 }
 
@@ -110,7 +111,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2); /* Black overlay */
+  background-color: rgba(0, 0, 0, 0.1); /* Black overlay */
   z-index: 1;
 }
 
