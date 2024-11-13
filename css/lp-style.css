@@ -53,14 +53,14 @@ h2 {
   padding: 10px 15px;
   display: block;
   text-align: center;
+  transition: background-color 0.5s ease-in
 }
 
 /* Hover effect */
 .menu a:hover {
-  border-width: 2px;
-  border-color: black;
-  background-color: rgb(23, 58, 50);
-  color:whitesmoke;
+  /* background-color: rgb(23, 49, 58); */
+  background-color: #006f46;
+  transition: background-color 0.3s ease-in-out
 }
 
 /* ======================================================= */
@@ -160,6 +160,7 @@ p {
   border: none;
   cursor: pointer;
   overflow: hidden; /* Keeps the button content in place */
+  text-shadow: #393939 1px 1px 1px;
 }
 
 .dollar {
