@@ -1,12 +1,14 @@
 /* Background Page Content */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 /* ======================================================= */
 /* Content ABOVE nav bar */
-h1, h2{
+h1,
+h2 {
   text-shadow: #393939 3px 3px 1px;
   color: white;
   padding: 10px;
@@ -30,7 +32,8 @@ h2 {
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 40px; /* Adjust the height as needed */
+  height: 40px;
+  /* Adjust the height as needed */
   position: sticky;
 }
 
@@ -42,13 +45,15 @@ h2 {
 }
 
 .menu li {
-  margin: 0 15px; /* Space out the list items */
+  margin: 0 15px;
+  /* Space out the list items */
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  font-size: 18px; /* Adjust the font size as needed */
+  font-size: 18px;
+  /* Adjust the font size as needed */
   padding: 10px 15px;
   display: block;
   text-align: center;
@@ -68,51 +73,145 @@ body {
   background-image: linear-gradient(to bottom, #135559, #091d2d 120px);
   background-repeat: no-repeat;
   /* Adjust height of each gradient */
-  background-size: 100%; 
+  background-size: 100%;
   background-position: top, bottom;
 }
 
 p {
-  color:white;
+  color: white;
   padding: 20px;
-  font-size:large;
+  font-size: large;
   text-align: center;
 }
 
 /* Container styling */
 .container {
   display: flex;
-  gap: 20px; /* Space between columns */
+  gap: 20px;
+  /* Space between columns */
   padding: 20px;
 }
 
 /* Column styling */
 .column {
-  flex: 1; /* Each column takes up equal width */
+  flex: 1;
+  /* Each column takes up equal width */
   padding: 5px;
   font-size: large;
 }
 
-.forum-container {
-  content: '';
-  padding-top: 20px;
+/* Background (behind forum) Styling */
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Full viewport height */
   background-image: url("/img/legal-scales.jpg");
+  /* Background image */
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 20px;
+  overflow: hidden;
 }
 
-.forum {
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  content: ''; 
+/* Dark overlay */
+.background::before {
+  content: '';
   position: absolute;
-  /* background-color: rgba(0, 0, 0, 0.2);  */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Adjust the opacity for darkness */
+  z-index: 1;
+  /* Overlay on top of the image */
 }
+
+/* Forum Layout + Post Styling */
+/* Layout container for centering the post */
+.forum-layout {
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  padding: 20px;
+  min-height: 100px;
+}
+
+/* Centered post container */
+.post {
+  display: flexbox;
+  flex-direction: column;
+  border: 2px solid rgb(239, 239, 239);
+  border-radius: 10px;
+  /* background-color: #f9f9f9; */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* Username bar styling */
+.username-bar {
+  text-align: left;
+  background-color: #091d2d;
+
+  color: white;
+  text-shadow: rgb(0, 0, 0) 1px 0.5px 1px;
+  font-stretch: semi-expanded;
+  font-size: larger;
+
+  padding: 10px;
+}
+
+/* Post body styling */
+.post-body {
+  text-align: left;
+  padding: 20px 0px 0px 20px;
+  font-size: 14px;
+  color: black;
+  background-color: rgba(238, 238, 238, 0.9);
+  min-height: 100px;
+}
+
+/* Make sure the text inside the post container doesn't exceed max width */
+.forum-layout p {
+  font-size:large;
+  color: black; 
+  margin: 0;
+  word-wrap: break-word;
+}
+
+
+
+/* .forum-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 800px) 1fr; 
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.username-bar {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.post-body {
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+} */
 
 /* MONEY BUTTON */
 .money-button {
@@ -123,19 +222,23 @@ p {
   background-color: #04AA6D;
   border: none;
   cursor: pointer;
-  overflow: hidden; /* Keeps the button content in place */
+  overflow: hidden;
+  /* Keeps the button content in place */
   text-shadow: #393939 1px 1px 1px;
 }
 
 .dollar {
-  position: fixed; /* Fix the dollar signs to the viewport */
+  position: fixed;
+  /* Fix the dollar signs to the viewport */
   font-size: 30px;
   color: green;
   opacity: 1;
   transform: translateY(0) rotate(0deg);
   animation: flutter 2s ease-out forwards;
-  pointer-events: none; /* Prevents the dollar signs from interfering with the page */
-  z-index: 1000; /* Ensures the dollar bills are on top of other elements */
+  pointer-events: none;
+  /* Prevents the dollar signs from interfering with the page */
+  z-index: 1000;
+  /* Ensures the dollar bills are on top of other elements */
 }
 
 /* Animation for fluttering effect */
@@ -144,6 +247,7 @@ p {
     opacity: 1;
     transform: translateY(0) rotate(0deg);
   }
+
   /* 50% {
     opacity: 0.8;
     transform: translate(0px, 50px) rotate(15deg);
