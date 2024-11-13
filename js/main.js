@@ -25,8 +25,11 @@ function loaded() {
       const mouseX = event.clientX;
       const mouseY = event.clientY;
 
-      dollar.style.left = `${mouseX}px`;
-      dollar.style.top = `${mouseY}px`;
+      const offsetX = (Math.random() * 60) - 30;
+      const offsetY = (Math.random() * 60) - 30;
+
+      dollar.style.left = `${mouseX + offsetX}px`;
+      dollar.style.top = `${mouseY + offsetY}px`;
 
       // Add dollar to the body or document so it can flow over the page
       document.body.appendChild(dollar);
