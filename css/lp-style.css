@@ -23,11 +23,6 @@ h2 {
   text-shadow: #000000 3px 3px 1px;
 }
 
-.constitution-disclaimer p{
-  margin-top: -20px;
-  font-size: smaller;
-}
-
 /* ======================================================= */
 /* Styling the navigation bar */
 .menu {
@@ -119,9 +114,15 @@ p {
   width: 100%;
 }
 
+/* Not Needed -- Kept as a reference */
+/* .constitution-disclaimer p{ */
+  /* margin-top: -20px; */
+  /* font-size: smaller; */
+/* } */
+
 /* Tagline at the Bottom (list of felonies + Saul's Message) */
 .box {
-  padding-bottom: 0.5in;
+  padding-bottom: 0.25in;
   background-image: url("../img/moneyyy.avif");
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
   background-blend-mode: multiply;
