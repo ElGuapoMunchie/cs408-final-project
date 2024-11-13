@@ -1,0 +1,155 @@
+/* Background Page Content */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* ======================================================= */
+/* Content ABOVE nav bar */
+h1, h2{
+  text-shadow: #393939 3px 3px 1px;
+  color: white;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, #091d2d, #135559 180px);
+  text-align: center;
+}
+
+h2 {
+  background: none;
+  text-shadow: #000000 3px 3px 1px;
+}
+
+/* ======================================================= */
+/* Styling the navigation bar */
+.menu {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 40px; /* Adjust the height as needed */
+  position: sticky;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 10px;
+}
+
+.menu li {
+  margin: 0 15px; /* Space out the list items */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Adjust the font size as needed */
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+  transition: background-color 0.5s ease-in-out
+}
+
+/* Hover effect */
+.menu a:hover {
+  /* background-color: rgb(23, 49, 58); */
+  background-color: #006f46;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* ======================================================= */
+/* Body Text (below nav bar) */
+body {
+  background-image: linear-gradient(to bottom, #135559, #091d2d 120px);
+  background-repeat: no-repeat;
+  /* Adjust height of each gradient */
+  background-size: 100%; 
+  background-position: top, bottom;
+}
+
+p {
+  color:white;
+  padding: 20px;
+  font-size:large;
+  text-align: center;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  gap: 20px; /* Space between columns */
+  padding: 20px;
+}
+
+/* Column styling */
+.column {
+  flex: 1; /* Each column takes up equal width */
+  padding: 5px;
+  font-size: large;
+}
+
+.forum-container {
+  content: '';
+  padding-top: 20px;
+  background-image: url("/img/legal-scales.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.forum {
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  content: ''; 
+  position: absolute;
+  /* background-color: rgba(0, 0, 0, 0.2);  */
+}
+
+/* MONEY BUTTON */
+.money-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #04AA6D;
+  border: none;
+  cursor: pointer;
+  overflow: hidden; /* Keeps the button content in place */
+  text-shadow: #393939 1px 1px 1px;
+}
+
+.dollar {
+  position: fixed; /* Fix the dollar signs to the viewport */
+  font-size: 30px;
+  color: green;
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+  animation: flutter 2s ease-out forwards;
+  pointer-events: none; /* Prevents the dollar signs from interfering with the page */
+  z-index: 1000; /* Ensures the dollar bills are on top of other elements */
+}
+
+/* Animation for fluttering effect */
+@keyframes flutter {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  /* 50% {
+    opacity: 0.8;
+    transform: translate(0px, 50px) rotate(15deg);
+  } */
+  100% {
+    opacity: 0;
+    transform: translate(0px, 100px) rotate(-30deg);
+  }
+}
