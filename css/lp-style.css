@@ -23,6 +23,11 @@ h2 {
   text-shadow: #000000 3px 3px 1px;
 }
 
+.constitution-disclaimer p{
+  margin-top: -20px;
+  font-size: smaller;
+}
+
 /* ======================================================= */
 /* Styling the navigation bar */
 .menu {
