@@ -36,3 +36,4 @@ As a stretch goal, I would like to make the `contact` page contain either a form
 
 ## Reference Links / Citations
 - [Nav Bar Guide](https://www.w3schools.com/css/css_navbar_horizontal.asp)
+- [Dropdown Menu Guide](https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp)

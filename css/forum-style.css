@@ -127,6 +127,9 @@ p {
   /* Overlay on top of the image */
 }
 
+/* ======================================================= */
+/* Option 1 for Forum Posts */
+/* ======================================================= */
 /* Forum Layout + Post Styling */
 /* Layout container for centering the post */
 .forum-layout {
@@ -142,6 +145,7 @@ p {
 
 /* Centered post container */
 .post {
+  margin: 5px;
   display: flexbox;
   flex-direction: column;
   border: 2px solid rgb(239, 239, 239);
@@ -184,38 +188,40 @@ p {
   word-wrap: break-word;
 }
 
+/* ======================================================= */
+/* Option 2 for Forum Posts -- Tables */
+/* ======================================================= */
 
-
-/* .forum-layout {
-  display: grid;
-  grid-template-columns: 1fr minmax(300px, 800px) 1fr; 
-  padding: 20px;
-  min-height: 100vh;
-}
-
-.username-bar {
-  background-color: #4a90e2;
-  color: #fff;
-  padding: 10px;
-  font-weight: bold;
+table {
   text-align: left;
+  width: 100%;
+
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+  margin: 20px auto;
+  padding: 20px 0 0 20px;
+  width: 70%;
+
+  /* background-color: white; */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
 }
 
-.post-body {
-  padding: 20px;
-  font-size: 16px;
-  color: #333;
+thead,
+tfoot {
+  background-color: rgba(255, 255, 255, 0.839);
 }
 
-.post {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-} */
+
+th,
+td {
+  border: 1px solid rgb(56, 56, 56);
+  padding: 8px 15px;
+}
+
 
 /* MONEY BUTTON */
 .money-button {
