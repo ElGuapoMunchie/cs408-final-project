@@ -16,7 +16,7 @@ h2 {
   margin-top: 0;
   margin-bottom: 0;
   background-size: cover;
-  background-image: linear-gradient(to bottom, rgb(9, 29, 45), rgb(44, 40, 75) 75px);
+  background-image: linear-gradient(to bottom, #133959, rgb(9, 29, 45) 55px);
   text-align: center;
 }
 
@@ -72,7 +72,7 @@ h2 {
 /* Body Text (below nav bar) */
 body {
   background-size: cover;
-  background-image: linear-gradient(rgb(44, 40, 75), rgb(9, 29, 45));
+  background-image: linear-gradient(to bottom, #133959, rgb(9, 29, 45));
   background-repeat: no-repeat;
   /* Adjust height of each gradient */
   /* background-size: 100% 200px, 100% calc(100% - 200px); */
