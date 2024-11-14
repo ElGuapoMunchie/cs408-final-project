@@ -132,7 +132,11 @@ p {
 .forum-layout {
   display: grid;
   /* grid-template-columns: 1fr; */
-  padding: 20px;
+  padding: 20px 0 0 20px;
+  width: 70%;
+  min-width: 60%;
+  max-width: 80%;
+  margin: 0 auto;
   min-height: 100px;
 }
 
