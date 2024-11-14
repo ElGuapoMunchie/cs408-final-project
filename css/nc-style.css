@@ -1,0 +1,240 @@
+/* Background Page Content */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* ======================================================= */
+/* Content ABOVE nav bar */
+
+h1,
+h2 {
+  text-shadow: #393939 3px 3px 1px;
+  color: white;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgb(9, 29, 45), rgb(44, 40, 75) 75px);
+  text-align: center;
+}
+
+h2 {
+  background: none;
+  text-shadow: #000000 3px 3px 1px;
+}
+
+/* ======================================================= */
+/* Styling the navigation bar */
+.menu {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 40px;
+  /* Adjust the height as needed */
+  position: sticky;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 10px;
+}
+
+.menu li {
+  margin: 0 15px;
+  /* Space out the list items */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  /* Adjust the font size as needed */
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+  transition: background-color 0.5s ease-in
+}
+
+/* Hover effect */
+.menu a:hover {
+  /* background-color: rgb(23, 49, 58); */
+  background-color: #006f46;
+  transition: background-color 0.3s ease-in-out
+}
+
+/* ======================================================= */
+/* Body Text (below nav bar) */
+body {
+  background-size: cover;
+  background-image: linear-gradient(rgb(44, 40, 75), rgb(9, 29, 45));
+  background-repeat: no-repeat;
+  /* Adjust height of each gradient */
+  /* background-size: 100% 200px, 100% calc(100% - 200px); */
+  background-position: top, bottom;
+}
+
+p {
+  color: whitesmoke;
+  padding: 20px;
+  padding-left: 10%;
+  font-size: large;
+  text-align: center;
+  width: 80%;
+}
+
+/* ======================================================= */
+/* Top Banner styling */
+.banner {
+  background-repeat: no-repeat;
+  background-image: url('/img/SaulFlagCorrected.jpg'); 
+  background-size: cover; /* Ensure the image covers the entire banner */
+  background-position: center -60px; /* Center the image and shift it down */
+  height: 300px; /* Adjust height as needed */
+  position: relative; /* Necessary for absolute positioning of text and overlay */
+  display: flex;
+  justify-content: center; /* Center the text columns horizontally */
+  align-items: center; /* Center the text columns vertically */
+  color: white; /* Set text color to white to contrast with the background */
+}
+
+/* Overlay styling */
+.banner::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1); /* Black overlay */
+  z-index: 1;
+}
+
+/* Text styling inside the container */
+.banner > * {
+  position: relative;
+  z-index: 2; /* Ensures text appears above the overlay */
+}
+
+/* Column styling */
+.column {
+  flex: 1;
+  padding: 5px;
+  font-size: large;
+}
+
+/* Optional styling for left and right columns */
+.left {
+  width: 50%;
+  /* background-color: rgb(0, 25, 34);  */
+}
+
+.left img {
+  width: 100%;
+}
+
+.right {
+  width: 50%;
+  /* background-color: #e2e2e2; */
+}
+
+.right img {
+  padding-top: 20px;
+  width: 100%;
+}
+
+/* Not Needed -- Kept as a reference */
+/* .constitution-disclaimer p{ */
+/* margin-top: -20px; */
+/* font-size: smaller; */
+/* } */
+
+/* ======================================================= */
+/* Container styling for lower about section*/
+.container {
+  display: flex;
+  gap: 20px; /* Space between columns */
+  padding: 20px;
+}
+
+/* ======================================================= */
+/* Footer Section */
+.box {
+  padding: 10em;
+  background-repeat: no-repeat;
+  background-image: url("../img/moneyyy.avif");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+}
+
+.box p {
+  padding-top: 10%;
+  text-shadow: #000000 3px 3px 0px;
+  color: white;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-size: cover;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.disclaimer p {
+  padding-top: 20px;
+  font-size: medium;
+  font-weight: normal;
+  text-align: center;
+  padding-left: 25%;
+  width: 50%;
+}
+
+/* MONEY BUTTON */
+.money-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #04AA6D;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  /* Keeps the button content in place */
+  text-shadow: #393939 1px 1px 1px;
+}
+
+.dollar {
+  position: fixed;
+  /* Fix the dollar signs to the viewport */
+  font-size: 30px;
+  color: green;
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+  animation: flutter 2s ease-out forwards;
+  pointer-events: none;
+  /* Prevents the dollar signs from interfering with the page */
+  z-index: 1000;
+  /* Ensures the dollar bills are on top of other elements */
+}
+
+/* Animation for fluttering effect */
+@keyframes flutter {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  /* 50% {
+    opacity: 0.8;
+    transform: translate(0px, 50px) rotate(15deg);
+  } */
+  100% {
+    opacity: 0;
+    transform: translate(0px, 100px) rotate(-30deg);
+  }
+}
