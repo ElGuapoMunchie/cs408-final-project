@@ -25,6 +25,14 @@ h2 {
   text-shadow: #000000 3px 3px 1px;
 }
 
+h3 {
+  background-color:#393939;
+  padding: 1%;
+  color: white;
+  text-align: center;
+  text-shadow: #000000 3px 3px 1px;
+}
+
 /* ======================================================= */
 /* Styling the navigation bar */
 .menu {
@@ -81,11 +89,8 @@ body {
 
 p {
   color: whitesmoke;
-  padding: 20px;
-  padding-left: 10%;
   font-size: large;
   text-align: center;
-  width: 80%;
 }
 
 /* ======================================================= */
@@ -157,43 +162,32 @@ p {
 /* ======================================================= */
 /* Container styling for lower about section*/
 .container {
-  display: flex;
-  gap: 20px; /* Space between columns */
-  padding: 20px;
+  background-image: linear-gradient(to bottom, #6b869d, rgb(74, 127, 171) 55px);
+  display: flexbox;
+
+  margin-top: 2em;
+  margin-left: 3em;
+  margin-right: 3em;
+
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #000000;
+
+  box-shadow: #000000 3px 3px 8px;
 }
 
-/* ======================================================= */
-/* Footer Section */
-.box {
-  padding: 10em;
-  background-repeat: no-repeat;
-  background-image: url("../img/moneyyy.avif");
-  background-color: rgba(0, 0, 0, 0.7);
-  background-blend-mode: multiply;
+.container h2{
+  padding-top: 1em;
 }
 
-.box p {
-  padding-top: 10%;
-  text-shadow: #000000 3px 3px 0px;
-  color: white;
-  padding: 10px;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-size: cover;
-  text-align: center;
-  font-size: x-large;
-  font-weight: bold;
-}
-
-.disclaimer p {
-  padding-top: 20px;
+.contact-box p {
   font-size: medium;
   font-weight: normal;
   text-align: center;
-  padding-left: 25%;
-  width: 50%;
 }
 
+/* ======================================================= */
 /* MONEY BUTTON */
 .money-button {
   position: relative;
