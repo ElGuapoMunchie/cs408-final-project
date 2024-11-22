@@ -26,6 +26,12 @@ h2 {
 }
 
 h3 {
+  margin-left: 30%;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  width: 40%;
   background-color:#393939;
   padding: 1%;
   color: white;
@@ -94,64 +100,6 @@ p {
 }
 
 /* ======================================================= */
-/* Top Banner styling */
-.banner {
-  background-repeat: no-repeat;
-  background-image: url('/img/SaulFlagCorrected.jpg'); 
-  background-size: cover; /* Ensure the image covers the entire banner */
-  background-position: center -60px; /* Center the image and shift it down */
-  height: 300px; /* Adjust height as needed */
-  position: relative; /* Necessary for absolute positioning of text and overlay */
-  display: flex;
-  justify-content: center; /* Center the text columns horizontally */
-  align-items: center; /* Center the text columns vertically */
-  color: white; /* Set text color to white to contrast with the background */
-}
-
-/* Overlay styling */
-.banner::before {
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.1); /* Black overlay */
-  z-index: 1;
-}
-
-/* Text styling inside the container */
-.banner > * {
-  position: relative;
-  z-index: 2; /* Ensures text appears above the overlay */
-}
-
-/* Column styling */
-.column {
-  flex: 1;
-  padding: 5px;
-  font-size: large;
-}
-
-/* Optional styling for left and right columns */
-.left {
-  width: 50%;
-  /* background-color: rgb(0, 25, 34);  */
-}
-
-.left img {
-  width: 100%;
-}
-
-.right {
-  width: 50%;
-  /* background-color: #e2e2e2; */
-}
-
-.right img {
-  padding-top: 20px;
-  width: 100%;
-}
 
 /* Not Needed -- Kept as a reference */
 /* .constitution-disclaimer p{ */
@@ -160,10 +108,21 @@ p {
 /* } */
 
 /* ======================================================= */
-/* Container styling for lower about section*/
+.shell {
+  display: inline-flexbox;
+  margin: 20px;
+
+  align-items: center;
+  align-self: center;
+  align-content: center;
+
+  /* width: 70%; */
+}
+
 .container {
-  background-image: linear-gradient(to bottom, #6b869d, rgb(74, 127, 171) 55px);
+  background-image: linear-gradient(to bottom, #0b2134, #4a7fab 105px);
   display: flexbox;
+  width: 80%;
 
   margin-top: 2em;
   margin-left: 3em;
@@ -181,10 +140,14 @@ p {
   padding-top: 1em;
 }
 
-.contact-box p {
+.contact-box{
+  background-color: rgba(181, 181, 181, 0.313);
   font-size: medium;
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
+  /* margin: 30px auto; */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* ======================================================= */
