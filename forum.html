@@ -29,35 +29,22 @@
 
   <div class="background">
 
-    <!-- "Table" post style -->
-     <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Message</th>
-            </tr>
-        </thead>
-        <tbody id="itemsInTable">
-          <!-- Items will be inserted here -->
-           
-      </tbody>
-     </table>
-
-
-    <!-- Considered making invididual posts like this: -->
-    <div class="forum-layout">
-      <div class="post">
-        <div class="username-bar">User Name</div>
-        <div class="post-body">
-          <p>This is the body of the post. The user can write their text here.</p>
-        </div>
+    <div class="container">
+      <!-- Post creation section -->
+      <div class="post-section">
+        <h2>Create a Post</h2>
+        <textarea id="post-text" placeholder="Write your post here..."></textarea>
+        <button id="post-button">Create Post</button>
       </div>
+
+      <!-- List of other posts -->
+      <div class="comments-section">
+        <h2>Posts</h2>
+        <div id="comments-list"></div>
+      </div>
+
+
     </div>
-
-
-
-
-
   </div>
 
 </body>
