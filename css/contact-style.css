@@ -8,8 +8,7 @@ body {
 /* ======================================================= */
 /* Content ABOVE nav bar */
 
-h1,
-h2 {
+h1 {
   text-shadow: #393939 3px 3px 1px;
   color: white;
   padding: 10px;
@@ -21,8 +20,14 @@ h2 {
 }
 
 h2 {
-  background: none;
-  text-shadow: #000000 3px 3px 1px;
+  color: white;
+  background-color: #056b45;
+  text-shadow: #393939 3px 3px 1px;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-size: cover;
+  text-align: center;
 }
 
 h3 {
@@ -94,7 +99,8 @@ body {
 }
 
 p {
-  color: whitesmoke;
+  text-shadow: none;
+  color: rgb(0, 0, 0);
   font-size: large;
   text-align: center;
 }
@@ -120,7 +126,7 @@ p {
 }
 
 .container {
-  background-image: linear-gradient(to bottom, #0b2134, #4a7fab 105px);
+  background-color: #ffffff;
   display: flexbox;
   width: 80%;
 
@@ -141,13 +147,19 @@ p {
 }
 
 .contact-box{
-  background-color: rgba(181, 181, 181, 0.313);
+  /* background-color: #9cc9ee; */
   font-size: medium;
   font-weight: bold;
+  text-shadow: 1px 1px black;
   text-align: center;
   /* margin: 30px auto; */
   padding-top: 10px;
   padding-bottom: 10px;
+  background-image: linear-gradient(to bottom, #9cc9ee, white 700px);
+}
+
+.contact-box a{
+  text-shadow: none;
 }
 
 /* ======================================================= */
