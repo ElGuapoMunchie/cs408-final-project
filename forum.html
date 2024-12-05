@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/forum-style.css">
   <html lang="en">
 </head>
-<script src="js/main.js"></script>
+<script src="js/forum.js"></script>
 
 <body>
 
@@ -32,18 +32,37 @@
       <!-- Post creation section -->
       <div class="post-section">
         <h2>Create a Post</h2>
-        <textarea id="post-text" placeholder="Write your post here..."></textarea>
-        <button id="post-button" onclick="createPost()">Create Post</button>
+        <form id="forum">
+          <input type="text" id="username" placeholder="Your name here" required>
+          <textarea id="post-text" placeholder="Write your message here..." required></textarea>
+          <button id="post-button" onclick="addItem()">Create Post</button>
+          <p>
+            <completion id="checkItemAdded"></completion>
+          </p>
+        </form>
       </div>
 
       <!-- List of other posts -->
       <div class="comments-section">
         <h2>Posts
         </h2>
-        <button id="load-posts-button">Load Posts</button>
-        <div id="comments-list">
-
-        </div>
+        <button id="load-posts-button" onclick="loadData()"> Load Posts</button>
+        <!-- <div id="comments-list"> -->
+          <table class="table">
+            <caption>Items Currently Stored:</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Post</th>
+                    <th scope="col">TimeStamp</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="itemsInTable">
+                <!-- Items will be inserted here -->
+            </tbody>
+        </table>
+        <!-- </div> -->
       </div>
 
     </div>
