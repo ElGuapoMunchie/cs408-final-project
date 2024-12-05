@@ -102,3 +102,66 @@ function createPost() {
         alert("Please enter some text for your post.");
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Button for loading posts
+  const loadPostsButton = document.getElementById("load-posts-button");
+  
+  // When the "Load Posts" button is clicked
+  loadPostsButton.addEventListener("click", function() {
+    loadPosts();
+  });
+
+  // Function to load posts from the database
+  function loadPosts() {
+    const commentsList = document.getElementById("comments-list");
+    commentsList.innerHTML = "";  // Clear any previous posts
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://your-api-endpoint.com/posts", true);  // Replace with your actual GET API endpoint
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        const posts = JSON.parse(xhr.responseText);  // Parse the JSON response
+
+        if (posts.length === 0) {
+          commentsList.innerHTML = "<p>No posts available.</p>";
+          return;
+        }
+
+        // Iterate over the posts and display them in the "comments-list" div
+        posts.forEach(post => {
+          const postDiv = document.createElement("div");
+          postDiv.classList.add("post");  // Add a class for styling purposes
+
+          const postTitle = document.createElement("h3");
+          postTitle.textContent = post.name;  // Post's name (user's name)
+          
+          const postContent = document.createElement("p");
+          postContent.textContent = post.content;  // Post content
+
+          const postTimestamp = document.createElement("small");
+          postTimestamp.textContent = `Posted on: ${new Date(post.timestamp).toLocaleString()}`;  // Timestamp
+
+          // Append the post elements to the postDiv
+          postDiv.appendChild(postTitle);
+          postDiv.appendChild(postContent);
+          postDiv.appendChild(postTimestamp);
+
+          // Append the postDiv to the commentsList
+          commentsList.appendChild(postDiv);
+        });
+      } else {
+        commentsList.innerHTML = "<p>Error loading posts. Please try again later.</p>";
+      }
+    };
+
+    xhr.onerror = function() {
+      commentsList.innerHTML = "<p>Error loading posts. Please check your network connection.</p>";
+    };
+
+    xhr.send();
+  }
+});
+
