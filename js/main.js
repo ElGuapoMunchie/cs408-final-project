@@ -52,3 +52,53 @@ function loaded() {
     };
   }
 }
+
+// Oh my god I hope this works
+
+// Load the posts using GET
+function loadData() {
+    let commentsList = document.getElementById("comments-list");
+    let xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", function () {
+        commentsList.innerHTML = "";  // make sure there aren't any duplicates
+        const posts = JSON.parse(xhr.response); // parse the posts
+
+        posts.forEach(post => {
+            let postDiv = document.createElement("div");
+            postDiv.classList.add("post");
+
+            let postText = document.createElement("p");
+            postText.textContent = post.text;
+
+            postDiv.appendChild(postText);
+            commentsList.appendChild(postDiv);
+        });
+    });
+
+    xhr.open("GET", "https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/posts");
+    xhr.send();
+}
+
+// Create a new post using PUT (or POST depending on your backend)
+function createPost() {
+    console.log("Clicked the button!");
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/posts");  // Assuming POST for creating a new post
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    let postText = document.getElementById("post-text").value;
+
+    if (postText.trim() !== "") {
+        xhr.send(JSON.stringify({
+            "text": postText
+        }));
+
+        // Optionally, clear the textarea after posting
+        document.getElementById("post-text").value = "";
+        
+        // Refresh the posts list after the new post is added
+        loadData();
+    } else {
+        alert("Please enter some text for your post.");
+    }
+}
