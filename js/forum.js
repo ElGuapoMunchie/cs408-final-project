@@ -67,7 +67,7 @@ function addItem() {
         minute: '2-digit',
         second: '2-digit',
         hour12: true
-      });
+    });
 
     let xhr = new XMLHttpRequest();
     xhr.open("PUT", "https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/items");
@@ -75,20 +75,25 @@ function addItem() {
 
     var username = document.getElementById("username");
     var post = document.getElementById("post-text");
-    
+
     // Check that input fields are valid (i.e. not NULL or empty)
     if (username.value != "" && post.value != "" && !isNumber(username.value)) {
-        
+
+        // SANITIZE THE INPUTS
+        username = sanitizeInput(username.value);
+        post = sanitizeInput(post.value);
+
         // Get current date
         let now = new Date();
         let dt = dateTimeFormatter.format(now);
 
+        // Print output for debugging/testing
         // console.log(username.value, post.value, dt)
-        
+
         xhr.send(JSON.stringify({
-            "id": username.value,
+            "id": username,
             "price": dt,
-            "name": post.value
+            "name": post
         }));
 
         checkItemAdded.textContent = "Successfully Added Item"; // Tell user item was added
@@ -151,4 +156,21 @@ function searchData() {
 
     xhr.open("GET", `https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/items?search=${encodeURIComponent(searchQuery)}`);
     xhr.send();
+}
+
+// INPUT VALIDATION AND SANITIZATION (the good stuff)
+
+/**
+ * Sanitizes user input fields (username and form submission for posts)
+ * by removing HTML tags and JS script tags from the input. 
+ * @param {*} input 
+ * @returns sanitized user input
+ */
+function sanitizeInput(input) {
+    // Convert to string if not string already
+    if (typeof input !== 'string') {
+        input = String(input); // Convert to string if not already
+    }
+    input = input.replace(/<\/?[^>]+(>|$)/g, ""); // Removes HTML tags
+    return input.replace(/<script.*?>.*?<\/script>/gi, ""); // Remove script tags
 }
