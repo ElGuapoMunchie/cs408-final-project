@@ -104,3 +104,41 @@ function addItem() {
         }
     }
 }
+
+// Search through the database to display specific posts matching query
+function searchData() {
+    console.log("searching through data");
+
+    let lambda = document.getElementById("itemsInTable");
+    let searchQuery = document.getElementById("searchtext").value; // Get the search query from the input field
+    let xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("load", function () {
+        lambda.innerHTML = ""; // Clear the table to avoid duplicates
+        const items = JSON.parse(xhr.response); // Parse the response
+
+        items.forEach(item => {
+            var row = lambda.insertRow();
+            var id = row.insertCell(0);
+            var name = row.insertCell(1);
+            var price = row.insertCell(2);
+            var action = row.insertCell(3);
+
+            id.innerText = item.id;
+            name.innerText = item.name;
+            price.innerText = item.price;
+
+            // Create the DELETE button
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.onclick = function () {
+                deleteItem(item.id); // Delete the specified item
+            };
+            action.appendChild(deleteButton);
+        });
+    });
+
+    // Include the search query in the API request as a query parameter
+    xhr.open("GET", `https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/items?search=${encodeURIComponent(searchQuery)}`);
+    console.log(xhr.send());
+}

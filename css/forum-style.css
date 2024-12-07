@@ -173,6 +173,32 @@ p {
   background-color: #1976D2;
 }
 
+/* Search Bar and Refresh Button organization */
+.ui {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px; 
+}
+
+.search-bar {
+  display: flex; 
+  gap: 5px; 
+}
+
+#searchtext {
+  padding: 5px; 
+}
+
+button {
+  padding: 5px 10px; 
+}
+
+.ui button:hover {
+  background-color: #1976D2;
+}
+
+
 /* Comments section */
 .comments-section {
   background-color: rgba(0,0,0,0.9);
