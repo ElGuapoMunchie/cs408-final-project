@@ -403,6 +403,7 @@ td {
 
 /* MONEY BUTTON */
 .money-button {
+  z-index: 10;
   position: relative;
   padding: 10px 20px;
   font-size: 18px;

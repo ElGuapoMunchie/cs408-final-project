@@ -4,7 +4,7 @@ window.onload = loadData;
 
 // Load the data using GET
 function loadData() {
-    console.log("loaded data")
+    // console.log("loaded data")
     let lambda = document.getElementById("itemsInTable");
     let xhr = new XMLHttpRequest();
     xhr.addEventListener("load", function () {
@@ -31,6 +31,10 @@ function loadData() {
             action.appendChild(deleteButton);
         });
     });
+
+    // Print statements for debugging/testing
+    // console.log(xhr.open("GET", "https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/items"));
+    // console.log(xhr.send());
 
     xhr.open("GET", "https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/items");
     xhr.send();
@@ -97,18 +101,19 @@ function addItem() {
 
     } else {
         // Provide error message corresponding to problem
-        if (name === "") {
-            checkItemAdded.textContent = "Error: Cannot have empty fields. Ensure all items have a name, price, and id.";
-        } else if (!isNumber(price) || !isNumber(id)) {
-            checkItemAdded.textContent = "Error: Price and ID fields must be a number (e.g. numeric digits [0-9, etc]).";
+        if (username === "") {
+            checkItemAdded.textContent = "Error: Username cannot be empty.";
+        } else if (isNumber(username)) {
+            checkItemAdded.textContent = "Error: Username cannot be a number.";
+        } else if (post === "") {
+            checkItemAdded.textContent = "Error: Post cannot be empty.";
         }
     }
 }
 
 // Search through the database to display specific posts matching query
 function searchData() {
-    console.log("searching through data");
-
+    // console.log("Search Queried")
     let lambda = document.getElementById("itemsInTable");
     let searchQuery = document.getElementById("searchtext").value; // Get the search query from the input field
     let xhr = new XMLHttpRequest();
@@ -139,6 +144,11 @@ function searchData() {
     });
 
     // Include the search query in the API request as a query parameter
+
+    // Print statements for debugging/testing
+    // console.log(xhr.open("GET", `https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/items?search=${encodeURIComponent(searchQuery)}`));
+    // console.log(xhr.send());
+
     xhr.open("GET", `https://5zol9aa2td.execute-api.us-east-2.amazonaws.com/items?search=${encodeURIComponent(searchQuery)}`);
-    console.log(xhr.send());
+    xhr.send();
 }
