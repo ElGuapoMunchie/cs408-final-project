@@ -33,6 +33,28 @@ As a stretch goal, I would like to make the `contact` page contain either a form
 ![image](https://github.com/user-attachments/assets/15462a7a-9bd9-473b-b07d-265e8998a419)
 ![image](https://github.com/user-attachments/assets/e175f613-2ecc-46fb-b77d-b43035845c04)
 
+## Additional Testing not shown in Project Code
+I took some time to run my webpages through Google Chrome's [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview#devtools)- which is an open source tool for measuring the accessibility, performance, and SEO of webpages.
+
+The following images show my lighthouse results:
+- Home Page
+![Index scores: Performance - 93, Accessibility - 100, Best Practices - 100, SEO - 91](image-1.png)
+
+- Forum
+![Forum scores: Performance - 100, Accessibility - 100, Best Practices - 100, SEO - 90](image.png)
+
+- About
+![About scores: Performance - 100, Accessibility - 100, Best Practices - 100, SEO - 90](image-2.png)
+
+- Notable Cases
+![NC scores: Performance - 100, Accessibility - 94, Best Practices - 78, SEO - 90](image-3.png)
+
+*Upon inspection, the score for Best Practices is primarily caused by the number of embedded YouTube videos on the page. See sample screenshot.*
+
+![By eliminating render-blocking resources, like loading embedded YouTube videos on a webpage, the page could be loaded 40ms faster.](image-4.png)
+
+- Contact
+![A perfect score across the board. Performance, Accessibility, Best Practices, and SEO are all at 100. This image also contains confetti.](image-5.png)
 
 ## Reference Links / Citations
 - [Nav Bar Guide](https://www.w3schools.com/css/css_navbar_horizontal.asp)
