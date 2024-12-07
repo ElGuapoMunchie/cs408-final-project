@@ -96,7 +96,7 @@ function addItem() {
             "name": post
         }));
 
-        checkItemAdded.textContent = "Successfully Added Item"; // Tell user item was added
+        checkItemAdded.textContent = "Added your post! Click Refresh to view."; // Tell user item was added
 
         // Refresh the table (because why hit load unless we have to)
         // loadData();
