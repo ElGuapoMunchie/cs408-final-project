@@ -1,6 +1,24 @@
 # Web Dev Final Project
 
-## Project Spec
+## Usage / Running the Program:
+First, clone this repository to a new directory on your system. 
+
+> There are two ways to run this program: (1) Through the LivePreview extension in VSCode, and (2) by debugging the website in VSCode (recommended).
+
+#### Running via Terminal / Browser
+1. Navigate to the cloned repository.
+2. Enter the following into your terminal: `./index.html`
+
+#### Running via LivePreview in VSCode
+1. Open up this project in VSCode (and if you don't have it already, download and install the `LivePreview` extension).
+2. Select `index.html` in the explorer pane. Then, select the `live preview` button that appears in the top right corner to load the webpage into a window in VSCode.
+
+#### Running via Debug Website (recommended)
+1. Open up this project in VSCode.
+2. Navigate to the `Run and Debug` pane (option located on the left side of the screen).
+3. Select `Run and Debug` --> `Debug Website`. A new window will open in your browser where you can interact with the site.
+
+## Project Specifications:
 
 ### General Theme
 This project represents a complete website, that in an alternate universe, might have been used by
@@ -59,3 +77,9 @@ The following images show my lighthouse results:
 ## Reference Links / Citations
 - [Nav Bar Guide](https://www.w3schools.com/css/css_navbar_horizontal.asp)
 - [Dropdown Menu Guide](https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp)
+- [Animating Money Button](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+
+(More about animating the money button)
+- [Event Listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) 
+- https://dev.to/jeetvora331/throttling-in-javascript-easiest-explanation-1081
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters 
