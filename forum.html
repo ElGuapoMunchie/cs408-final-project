@@ -33,8 +33,12 @@
       <div class="post-section">
         <h2>Create a Post</h2>
         <form id="forum">
-          <input type="text" id="username" placeholder="Your name here" required>
-          <textarea id="post-text" placeholder="Write your message here..." required></textarea>
+          <div class="post-spacer">
+            <input type="text" id="username" placeholder="Your name here" required>
+          </div>
+          <div class="post-spacer">
+            <textarea id="post-text" placeholder="Write your message here..." required></textarea>
+          </div>
           <button id="post-button" onclick="addItem()">Create Post</button>
           <p>
             <completion id="checkItemAdded"></completion>

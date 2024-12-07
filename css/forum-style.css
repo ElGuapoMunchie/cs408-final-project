@@ -154,8 +154,8 @@ p {
   border-radius: 4px;
   font-size: large;
   resize: vertical;
+  font-family: sans-serif;
   pointer-events: auto;  /* Ensure it is interactable */
-
 }
 
 .post-section button {
@@ -171,6 +171,11 @@ p {
 
 .post-section button:hover {
   background-color: #1976D2;
+}
+
+.post-spacer {
+  
+  padding: 4px;
 }
 
 /* Search Bar and Refresh Button organization */
