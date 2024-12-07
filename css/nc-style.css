@@ -2,7 +2,7 @@
 html,
 body {
   height: 100%;
-  margin: 0;
+  margin: 10fr auto;
 }
 
 /* ======================================================= */
@@ -78,6 +78,8 @@ body {
   /* background-size: 100% 200px, 100% calc(100% - 200px); */
   /* background-position: top, bottom; */
   background-color: #0a2135;
+  margin-bottom: 400px;
+  padding-bottom: 80px;
 }
 
 p {

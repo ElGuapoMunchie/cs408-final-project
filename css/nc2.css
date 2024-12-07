@@ -1,0 +1,172 @@
+/* Background Page Content */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* ======================================================= */
+/* Content ABOVE nav bar */
+
+h1,
+h2 {
+  text-shadow: #393939 3px 3px 1px;
+  color: white;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, #133959, rgb(9, 29, 45) 55px);
+  text-align: center;
+}
+
+h2 {
+  background: none;
+  text-shadow: #000000 3px 3px 1px;
+}
+
+/* ======================================================= */
+/* Styling the navigation bar */
+.menu {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 40px;
+  /* Adjust the height as needed */
+  position: sticky;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 10px;
+}
+
+.menu li {
+  margin: 0 15px;
+  /* Space out the list items */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  /* Adjust the font size as needed */
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+  transition: background-color 0.5s ease-in
+}
+
+/* Hover effect */
+.menu a:hover {
+  /* background-color: rgb(23, 49, 58); */
+  background-color: #006f46;
+  transition: background-color 0.3s ease-in-out
+}
+
+/* ======================================================= */
+/* Body Text (below nav bar) */
+body {
+  /* background-size: cover; */
+  /* background-image: linear-gradient(to bottom, #133959, rgb(9, 29, 45)); */
+  /* background-repeat: no-repeat; */
+  /* Adjust height of each gradient */
+  /* background-size: 100% 200px, 100% calc(100% - 200px); */
+  /* background-position: top, bottom; */
+  background-color: #0a2135;
+}
+
+p {
+  color: whitesmoke;
+  padding: 20px;
+  padding-left: 10%;
+  font-size: large;
+  text-align: center;
+  width: 80%;
+}
+
+/* ======================================================= */
+/* Columns for Video / Text Display */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Horizontal space between columns */
+  }
+  
+  .column {
+    display: grid;
+    grid-auto-rows: auto; /* Automatically adjust row height based on content */
+    /* Vertical spacing between items */
+    row-gap: 170px; 
+  }
+  
+  .column .excerpt-l,
+  .column .excerpt-r {
+    display: flex;
+    align-items: center; /* Centers text or video within their container */
+    justify-content: space-evenly; /* Optional: Center horizontally within the column */
+  }
+  
+  iframe {
+    display: block;
+    margin: 10 auto;
+  }
+  
+  /* Vertically align alternating content */
+  .column.left .excerpt-l:nth-child(odd) {
+    margin-top: 50px; /* Add top margin to match the height of the adjacent video */
+  }
+  
+  .column.right .excerpt-r:nth-child(odd) {
+    margin-top: 50px; /* Add top margin to match the height of the adjacent video */
+  }
+  
+  /* MONEY BUTTON */
+.money-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #04AA6D;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    /* Keeps the button content in place */
+    text-shadow: #393939 1px 1px 1px;
+  }
+  
+  .dollar {
+    position: fixed;
+    /* Fix the dollar signs to the viewport */
+    font-size: 30px;
+    color: green;
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+    animation: flutter 2s ease-out forwards;
+    pointer-events: none;
+    /* Prevents the dollar signs from interfering with the page */
+    z-index: 1000;
+    /* Ensures the dollar bills are on top of other elements */
+  }
+  
+  /* Animation for fluttering effect */
+  @keyframes flutter {
+    0% {
+      opacity: 1;
+      transform: translateY(0) rotate(0deg);
+    }
+  
+    /* 50% {
+      opacity: 0.8;
+      transform: translate(0px, 50px) rotate(15deg);
+    } */
+    100% {
+      opacity: 0;
+      transform: translate(0px, 100px) rotate(-30deg);
+    }
+  }
